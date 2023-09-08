@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
+import { AppProvider } from './contexts/AppContext';
 import GlobalStyle from './assets/styles/GlobalStyle';
 import SuspenseFallback from './pages/fallback/SuspenseFallback';
 import ErrorFallback from './pages/fallback/ErrorFallback';
@@ -28,14 +29,16 @@ function App() {
 	return (
 		<>
 			<GlobalStyle />
-			<ErrorBoundary
-				FallbackComponent={ErrorFallback}
-				onReset={() => window.location.replace('/')}
-			>
-				<Suspense fallback={<SuspenseFallback />}>
-					<RouterProvider router={router} />
-				</Suspense>
-			</ErrorBoundary>
+			<AppProvider>
+				<ErrorBoundary
+					FallbackComponent={ErrorFallback}
+					onReset={() => window.location.replace('/')}
+				>
+					<Suspense fallback={<SuspenseFallback />}>
+						<RouterProvider router={router} />
+					</Suspense>
+				</ErrorBoundary>
+			</AppProvider>
 		</>
 	);
 }

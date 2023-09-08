@@ -1,6 +1,6 @@
 import GlobalStyle from '../../assets/styles/GlobalStyle';
 import FullPage from '../../ui/layout/FullPage';
-import Button from '../../ui/button/Button';
+import Button from '../../ui/elements/Button';
 
 type ErrorFallBackProps = {
 	error: Error;

@@ -4,42 +4,42 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Thin.ttf');
+  src: url('./src/assets/Roboto-Thin.ttf');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Light.ttf');
+  src: url('./src/assets/fonts/Roboto-Light.ttf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Regular.ttf');
+  src: url('./src/assets/fonts/Roboto-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Medium.ttf');
+  src: url('./src/assets/fonts/Roboto-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Bold.ttf');
+  src: url('./src/assets/fonts/Roboto-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Black.ttf');
+  src: url('./src/assets/fonts/Roboto-Black.ttf');
   font-weight: 900;
   font-style: normal;
 }
@@ -62,17 +62,16 @@ const GlobalStyle = createGlobalStyle`
   --black-950: #111;
   --black-1000: #000;
 
-  --primary-50: #f6faf3;
-  --primary-100: #e9f5e3;
-  --primary-200: #d3eac8;
-  --primary-300: #afd89d;
-  --primary-400: #82bd69;
-  --primary-500: #61a146;
-  --primary-600: #4c8435;
-  --primary-700: #3d692c;
-  --primary-800: #345427;
-  --primary-900: #2b4522;
-  --primary-950: #13250e;
+  --primary-light:#25573e;
+  --primary: #1f4633;
+  --primary-dark: #1a3a2a;
+  --primary-darker: #0e2018;
+
+  --secondary-light:#d56c21;
+  --secondary: #b1541d;
+  --secondary-dark: #8d431f;
+  --secondary-darker: #72391c:
+
 
   --xxxs: .3rem;
   --xxs: .5rem;
@@ -95,7 +94,7 @@ const GlobalStyle = createGlobalStyle`
   --font-xxxl: 5rem;
   --font-xxxxl: 6rem;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.9);
+  --shadow-sm: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.9);
   --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.5);
   
@@ -106,12 +105,12 @@ const GlobalStyle = createGlobalStyle`
 
 ::-moz-selection {
   color: var(--black-0);
-  background-color: var(--primary-700);
+  background-color: var(--primary);
 }
 
 ::selection {
   color: var(--black-0);
-  background-color: var(--primary-700);
+  background-color: var(--primary);
 }
 
 *,
