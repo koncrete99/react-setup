@@ -9,9 +9,7 @@ const colors = {
 	primary: css`
 		background-color: var(--primary);
 		color: var(--black-50);
-		&:hover {
-			background-color: var(--primary-light);
-		}
+		&:hover,
 		&:focus {
 			background-color: var(--primary-dark);
 		}
@@ -19,9 +17,7 @@ const colors = {
 	secondary: css`
 		background-color: var(--secondary);
 		color: var(--black-50);
-		&:hover {
-			background-color: var(--secondary-light);
-		}
+		&:hover,
 		&:focus {
 			background-color: var(--secondary-dark);
 		}
@@ -61,8 +57,8 @@ const Button = styled.button<ButtonProps>`
 	&:focus {
 		background-color: var(--black-100);
 	}
-	${(props) => props.color !== undefined && colors[props.color]}
-	${(props) => props.size !== undefined && sizes[props.size]}
+	${(props) => props.color && colors[props.color]}
+	${(props) => props.size && sizes[props.size]}
 `;
 
 export default Button;

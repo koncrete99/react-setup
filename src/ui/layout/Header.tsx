@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
-	background-color: var(--black-900);
+	background-color: var(--base-800);
 `;
 
 function Header() {

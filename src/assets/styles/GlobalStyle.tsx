@@ -45,22 +45,20 @@ const GlobalStyle = createGlobalStyle`
 }
 
 :root {
-  --black-0: #fff;
-  --black-50: #eee;
-  --black-100: #ddd;
-  --black-150: #ccc;
-  --black-200: #bbb;
-  --black-250: #aaa;
-  --black-200: #999;
-  --black-300: #888;
-  --black-400: #777;
-  --black-700: #666;
-  --black-750: #555;
-  --black-800: #444;
-  --black-850: #333;
-  --black-900: #222;
-  --black-950: #111;
-  --black-1000: #000;
+
+  --base-0: #ffffff;
+  --base-50: #e7eaeb;
+  --base-100: #d0d5d6;
+  --base-200: #a0abae;
+  --base-300: #718085;
+  --base-400: #41565d;
+  --base-500: #122c34;
+  --base-600: #0e232a;
+  --base-700: #0b1a1f;
+  --base-800: #071215;
+  --base-900: #04090a;
+
+  --font-color: var(--base-200);
 
   --primary-light:#25573e;
   --primary: #1f4633;

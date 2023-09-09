@@ -7,8 +7,8 @@ const StyledAppLayout = styled.div`
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 6rem 1fr auto;
-	background-color: var(--black-950);
-	color: var(--black-50);
+	background-color: var(--base-900);
+	color: var(--base-300);
 	font-size: var(--size-font-md);
 `;
 

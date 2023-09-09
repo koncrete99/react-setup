@@ -1,39 +1,58 @@
 import { css, styled } from 'styled-components';
 
-interface IconProps {
-	color?: string;
-	size?: string;
-}
+type IconProps = {
+	color?: 'primary' | 'secondary';
+	size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'xxxxl';
+};
+
+const colors = {
+	primary: css`
+		color: var(--primary);
+	`,
+	secondary: css`
+		color: var(--secondary);
+	`,
+};
+
+const sizes = {
+	xxs: css`
+		font-size: var(--font-xxs);
+	`,
+	xs: css`
+		font-size: var(--font-xs);
+	`,
+	sm: css`
+		font-size: var(--font-sm);
+	`,
+	md: css`
+		font-size: var(--font-md);
+	`,
+	lg: css`
+		font-size: var(--font-lg);
+	`,
+	xl: css`
+		font-size: var(--font-xl);
+	`,
+	xxl: css`
+		font-size: var(--font-xxl);
+	`,
+	xxxl: css`
+		font-size: var(--font-xxxl);
+	`,
+	xxxxl: css`
+		font-size: var(--font-xxxxl);
+	`,
+};
 
 const Icon = styled.div<IconProps>`
-	${(props) =>
-		props.size === 'sm' &&
-		css`
-			font-size: 2rem;
-		`}
-	${(props) =>
-		props.size === 'md' &&
-		css`
-			font-size: 4rem;
-		`}
-	${(props) =>
-		props.size === 'lg' &&
-		css`
-			font-size: 6rem;
-		`}
-		${(props) =>
-		props.size === 'xl' &&
-		css`
-			font-size: 12rem;
-		`}
+	color: var(--font-color);
+	font-size: var(--font-sm);
 	display: inline-block;
 	line-height: 0;
-	transition: all 0.5s ease-in;
 	margin: 0;
 	padding: 0;
-	&:hover {
-		color: var(--grey-0);
-	}
+	${(props) => props.color && colors[props.color]}
+	${(props) => props.size && sizes[props.size]}
 `;
 
 export default Icon;

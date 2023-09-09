@@ -8,8 +8,8 @@ import ErrorFallback from './pages/fallback/ErrorFallback';
 
 const AppLayout = lazy(() => import('./ui/layout/AppLayout'));
 const Index = lazy(() => import('./pages/Index'));
-const Layout = lazy(() => import('./pages/design-system/Layout'));
-const Grid = lazy(() => import('./pages/design-system/Grid'));
+const Layout = lazy(() => import('./pages/design-system/LayoutPage'));
+const Grid = lazy(() => import('./pages/design-system/GridPage'));
 const PageNotFound = lazy(
 	() => import('./pages/fallback/PageNotFoundFallback')
 );
