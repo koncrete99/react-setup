@@ -2,9 +2,9 @@ import { Suspense, lazy } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { AppProvider } from './contexts/AppContext';
-import GlobalStyle from './assets/styles/GlobalStyle';
 import SuspenseFallback from './pages/fallback/SuspenseFallback';
 import ErrorFallback from './pages/fallback/ErrorFallback';
+import { GlobalStyle } from './assets/styles';
 
 const AppLayout = lazy(() => import('./ui/layout/AppLayout'));
 const Index = lazy(() => import('./pages/Index'));

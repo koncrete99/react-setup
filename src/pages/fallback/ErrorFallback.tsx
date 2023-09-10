@@ -1,4 +1,4 @@
-import GlobalStyle from '../../assets/styles/GlobalStyle';
+import { GlobalStyle } from '../../assets/styles/index';
 import FullPage from '../../ui/layout/FullPage';
 import Button from '../../ui/elements/Button';
 

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { colorPrimary, colorSecondary, typeSize } from '../../assets/styles';
 
 type HeadlineProps = {
 	as?: 'h1' | 'h2' | 'h3' | 'h4';
@@ -8,50 +9,43 @@ type HeadlineProps = {
 
 const headlines = {
 	h1: css`
-		font-size: var(--font-xl);
-		font-weight: 600;
-		text-transform: uppercase;
+		font-size: ${typeSize.xl};
 	`,
 	h2: css`
-		font-size: var(--font-lg);
-		font-weight: 600;
+		font-size: ${typeSize.lg};
 	`,
 	h3: css`
-		font-size: var(--font-lg);
-		font-weight: 600;
-		text-transform: uppercase;
+		font-size: ${typeSize.md};
 	`,
 	h4: css`
-		font-size: 3.6rem;
-		font-weight: 600;
-		text-transform: uppercase;
+		font-size: ${typeSize.sm};
 	`,
 };
 
 const colors = {
 	primary: css`
-		color: var(--primary);
+		color: ${colorPrimary.base};
 	`,
 	secondary: css`
-		color: var(--secondary);
+		color: ${colorSecondary.base};
 	`,
 };
 
 const sizes = {
 	sm: css`
-		font-size: var(--font-sm);
+		font-size: ${typeSize.sm};
 	`,
 	md: css`
-		font-size: var(--font-md);
+		font-size: ${typeSize.md};
 	`,
 	lg: css`
-		font-size: var(--font-lg);
+		font-size: ${typeSize.lg};
 	`,
 	xl: css`
-		font-size: var(--font-xl);
+		font-size: ${typeSize.xl};
 	`,
 	xxl: css`
-		font-size: var(--font-xxl);
+		font-size: ${typeSize.xxl};
 	`,
 };
 

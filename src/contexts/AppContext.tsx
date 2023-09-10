@@ -1,14 +1,14 @@
 import { createContext, useReducer } from 'react';
 
-type State = {
-	counter: number;
-	dispatch: React.Dispatch<Action>;
-};
-
 type Action =
 	| { type: 'counter/increase' }
 	| { type: 'counter/decrease' }
 	| { type: 'counter/set'; payload: number };
+
+type State = {
+	counter: number;
+	dispatch: React.Dispatch<Action>;
+};
 
 type AppProviderProps = {
 	children: React.ReactNode;
@@ -19,13 +19,7 @@ const initialState: State = {
 	dispatch: () => undefined,
 };
 
-const AppContext = createContext<{
-	state: State;
-	dispatch: React.Dispatch<Action>;
-}>({
-	state: initialState,
-	dispatch: () => undefined,
-});
+const AppContext = createContext<State | undefined>(undefined);
 
 function reducer(state: State, action: Action): State {
 	switch (action.type) {
@@ -41,10 +35,10 @@ function reducer(state: State, action: Action): State {
 }
 
 function AppProvider({ children }: AppProviderProps) {
-	const [state, dispatch] = useReducer(reducer, initialState);
+	const [{ counter }, dispatch] = useReducer(reducer, initialState);
 
 	return (
-		<AppContext.Provider value={{ state, dispatch }}>
+		<AppContext.Provider value={{ counter, dispatch }}>
 			{children}
 		</AppContext.Provider>
 	);

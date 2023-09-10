@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colorBase } from '../../assets/styles';
 
 const FullPage = styled.div`
 	width: 100vw;
@@ -7,8 +8,8 @@ const FullPage = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: var(--black-950);
-	color: var(--black-50);
+	background: ${colorBase[900]};
+	color: ${colorBase.default};
 `;
 
 export default FullPage;

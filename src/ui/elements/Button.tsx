@@ -1,4 +1,12 @@
 import styled, { css } from 'styled-components';
+import {
+	colorBase,
+	colorPrimary,
+	colorSecondary,
+	elShadow,
+	size,
+	typeSize,
+} from '../../assets/styles';
 
 type ButtonProps = {
 	color?: 'primary' | 'secondary';
@@ -7,55 +15,55 @@ type ButtonProps = {
 
 const colors = {
 	primary: css`
-		background-color: var(--primary);
-		color: var(--black-50);
+		background-color: ${colorPrimary.base};
+		color: ${colorBase[200]};
 		&:hover,
 		&:focus {
-			background-color: var(--primary-dark);
+			background-color: ${colorPrimary.dark};
 		}
 	`,
 	secondary: css`
-		background-color: var(--secondary);
-		color: var(--black-50);
+		background-color: ${colorSecondary.base};
+		color: ${colorBase[200]};
 		&:hover,
 		&:focus {
-			background-color: var(--secondary-dark);
+			background-color: ${colorSecondary.dark};
 		}
 	`,
 };
 
 const sizes = {
 	xs: css`
-		font-size: var(--font-xs);
-		padding: var(--xxs) var(--xs);
+		font-size: ${typeSize.xs};
+		padding: ${size.xxs} ${size.xs};
 	`,
 	sm: css`
-		font-size: var(--font-sm);
-		padding: var(--xxs) var(--xs);
+		font-size: ${typeSize.sm};
+		padding: ${size.xxs} ${size.xs};
 	`,
 	lg: css`
-		font-size: var(--font-lg);
-		padding: var(--sm) var(--md);
+		font-size: ${typeSize.lg};
+		padding: ${size.sm} ${size.md};
 	`,
 };
 
 const Button = styled.button<ButtonProps>`
-	font-size: var(--size-font-md);
-	background-color: var(--black-50);
-	color: var(--black-900);
-	padding: var(--xs) var(--sm);
-	border-radius: var(--xxs);
-	box-shadow: var(--shadow-sm);
+	font-size: ${typeSize.md};
+	background-color: ${colorBase[50]};
+	color: ${colorBase[900]};
+	padding: ${size.xs} ${size.sm};
+	border-radius: ${size.xxs};
+	box-shadow: ${elShadow.sm};
 	border: none;
 	font-weight: 400;
 	text-transform: uppercase;
 	line-height: 1;
 	transition: all 300ms ease;
 	&:hover {
-		background-color: var(--black-0);
+		background-color: ${colorBase[0]};
 	}
 	&:focus {
-		background-color: var(--black-100);
+		background-color: ${colorBase[100]};
 	}
 	${(props) => props.color && colors[props.color]}
 	${(props) => props.size && sizes[props.size]}

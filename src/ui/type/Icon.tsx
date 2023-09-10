@@ -1,4 +1,10 @@
 import { css, styled } from 'styled-components';
+import {
+	colorBase,
+	colorPrimary,
+	colorSecondary,
+	typeSize,
+} from '../../assets/styles';
 
 type IconProps = {
 	color?: 'primary' | 'secondary';
@@ -7,46 +13,46 @@ type IconProps = {
 
 const colors = {
 	primary: css`
-		color: var(--primary);
+		color: ${colorPrimary.default};
 	`,
 	secondary: css`
-		color: var(--secondary);
+		color: ${colorSecondary.default};
 	`,
 };
 
 const sizes = {
 	xxs: css`
-		font-size: var(--font-xxs);
+		font-size: ${typeSize.xxs};
 	`,
 	xs: css`
-		font-size: var(--font-xs);
+		font-size: ${typeSize.xs};
 	`,
 	sm: css`
-		font-size: var(--font-sm);
+		font-size: ${typeSize.sm};
 	`,
 	md: css`
-		font-size: var(--font-md);
+		font-size: ${typeSize.md};
 	`,
 	lg: css`
-		font-size: var(--font-lg);
+		font-size: ${typeSize.lg};
 	`,
 	xl: css`
-		font-size: var(--font-xl);
+		font-size: ${typeSize.xl};
 	`,
 	xxl: css`
-		font-size: var(--font-xxl);
+		font-size: ${typeSize.xxl};
 	`,
 	xxxl: css`
-		font-size: var(--font-xxxl);
+		font-size: ${typeSize.xxxl};
 	`,
 	xxxxl: css`
-		font-size: var(--font-xxxxl);
+		font-size: ${typeSize.xxxxl};
 	`,
 };
 
 const Icon = styled.div<IconProps>`
-	color: var(--font-color);
-	font-size: var(--font-sm);
+	color: ${colorBase.default};
+	font-size: ${typeSize.sm};
 	display: inline-block;
 	line-height: 0;
 	margin: 0;

@@ -1,12 +1,15 @@
 import { PropsWithChildren, createContext } from 'react';
 import styled from 'styled-components';
+import { colorBase, size } from '../../assets/styles';
 
 type CardProps = {
 	color?: string;
 };
 
 const StyledCard = styled.div`
-	background-color: green;
+	background-color: ${colorBase[950]};
+	border-radius: ${size.xxs};
+	padding: ${size.sm};
 `;
 
 const StyledHeader = styled.header`

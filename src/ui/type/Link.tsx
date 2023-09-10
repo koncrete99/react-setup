@@ -1,4 +1,5 @@
 import { css, styled } from 'styled-components';
+import { colorBase, colorPrimary, colorSecondary } from '../../assets/styles';
 
 type LinkProps = {
 	color?: 'primary' | 'secondary';
@@ -6,23 +7,23 @@ type LinkProps = {
 
 const colors = {
 	primary: css`
-		color: var(--primary);
+		color: ${colorPrimary.default};
 		&:hover,
 		&:focus {
-			background-color: var(--primary-dark);
+			background-color: ${colorPrimary.dark};
 		}
 	`,
 	secondary: css`
-		color: var(--secondary);
+		color: ${colorSecondary.default};
 		&:hover,
 		&:focus {
-			background-color: var(--secondary-dark);
+			background-color: ${colorSecondary.dark};
 		}
 	`,
 };
 
 const Link = styled.a<LinkProps>`
-	color: var(--font-color);
+	color: ${colorBase.default};
 	${(props) => props.color && colors[props.color]}
 `;
 

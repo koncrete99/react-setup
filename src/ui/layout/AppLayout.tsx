@@ -2,14 +2,15 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
+import { colorBase, typeSize } from '../../assets/styles';
 
 const StyledAppLayout = styled.div`
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 6rem 1fr auto;
-	background-color: var(--base-900);
-	color: var(--base-300);
-	font-size: var(--size-font-md);
+	background-color: ${colorBase[900]};
+	color: ${colorBase.default};
+	font-size: ${typeSize.md};
 `;
 
 const Main = styled.main``;

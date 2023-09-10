@@ -1,15 +1,14 @@
-import Column from '../ui/structure/Column';
-import Container from '../ui/structure/Container';
-import Grid from '../ui/structure/Grid';
 import Section from '../ui/structure/Section';
+import Container from '../ui/structure/Container';
 
 function Index() {
 	return (
 		<Section>
 			<Container>
-				<Grid>
-					<Column>dfgdfg</Column>
-				</Grid>
+				<h1>ToDo</h1>
+				<ul>
+					<li>Error Boundary</li>
+				</ul>
 			</Container>
 		</Section>
 	);
