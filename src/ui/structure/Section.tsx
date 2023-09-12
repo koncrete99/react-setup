@@ -1,9 +1,17 @@
 import styled from 'styled-components';
-import { colorBase } from '../../assets/styles';
+import { colorBase, size } from '../../assets/styles';
 
-const Section = styled.section`
-	padding: 3rem 2rem;
-	background-color: ${colorBase[950]};
+type SectionProps = {
+	$bgColor?: string;
+	color?: string;
+};
+
+const Section = styled.section<SectionProps>`
+	padding: ${size.xl} ${size.sm};
+	background-color: ${(props) =>
+		colorBase[props.$bgColor as keyof typeof colorBase] ?? colorBase[900]};
+	color: ${(props) =>
+		colorBase[props.color as keyof typeof colorBase] ?? colorBase.default};
 `;
 
 export default Section;

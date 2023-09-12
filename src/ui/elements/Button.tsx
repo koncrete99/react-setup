@@ -5,7 +5,7 @@ import {
 	colorSecondary,
 	elShadow,
 	size,
-	typeSize,
+	font,
 } from '../../assets/styles';
 
 type ButtonProps = {
@@ -15,7 +15,7 @@ type ButtonProps = {
 
 const colors = {
 	primary: css`
-		background-color: ${colorPrimary.base};
+		background-color: ${colorPrimary.default};
 		color: ${colorBase[200]};
 		&:hover,
 		&:focus {
@@ -23,7 +23,7 @@ const colors = {
 		}
 	`,
 	secondary: css`
-		background-color: ${colorSecondary.base};
+		background-color: ${colorSecondary.default};
 		color: ${colorBase[200]};
 		&:hover,
 		&:focus {
@@ -34,21 +34,21 @@ const colors = {
 
 const sizes = {
 	xs: css`
-		font-size: ${typeSize.xs};
+		font-size: ${font.xs};
 		padding: ${size.xxs} ${size.xs};
 	`,
 	sm: css`
-		font-size: ${typeSize.sm};
+		font-size: ${font.sm};
 		padding: ${size.xxs} ${size.xs};
 	`,
 	lg: css`
-		font-size: ${typeSize.lg};
+		font-size: ${font.lg};
 		padding: ${size.sm} ${size.md};
 	`,
 };
 
 const Button = styled.button<ButtonProps>`
-	font-size: ${typeSize.md};
+	font-size: ${font.md};
 	background-color: ${colorBase[50]};
 	color: ${colorBase[900]};
 	padding: ${size.xs} ${size.sm};
@@ -58,7 +58,7 @@ const Button = styled.button<ButtonProps>`
 	font-weight: 400;
 	text-transform: uppercase;
 	line-height: 1;
-	transition: all 300ms ease;
+	transition: all 0.3s ease;
 	&:hover {
 		background-color: ${colorBase[0]};
 	}

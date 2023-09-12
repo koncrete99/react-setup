@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components';
-import { colorPrimary, colorSecondary, typeSize } from '../../assets/styles';
+import {
+	colorBase,
+	colorPrimary,
+	colorSecondary,
+	font,
+} from '../../assets/styles';
 
 type HeadlineProps = {
 	as?: 'h1' | 'h2' | 'h3' | 'h4';
@@ -9,43 +14,45 @@ type HeadlineProps = {
 
 const headlines = {
 	h1: css`
-		font-size: ${typeSize.xl};
+		font-size: ${font.xxl};
+		color: ${colorBase[50]};
+		font-weight: 300;
 	`,
 	h2: css`
-		font-size: ${typeSize.lg};
+		font-size: ${font.xl};
 	`,
 	h3: css`
-		font-size: ${typeSize.md};
+		font-size: ${font.lg};
 	`,
 	h4: css`
-		font-size: ${typeSize.sm};
+		font-size: ${font.md};
 	`,
 };
 
 const colors = {
 	primary: css`
-		color: ${colorPrimary.base};
+		color: ${colorPrimary.default};
 	`,
 	secondary: css`
-		color: ${colorSecondary.base};
+		color: ${colorSecondary.default};
 	`,
 };
 
 const sizes = {
 	sm: css`
-		font-size: ${typeSize.sm};
+		font-size: ${font.sm};
 	`,
 	md: css`
-		font-size: ${typeSize.md};
+		font-size: ${font.md};
 	`,
 	lg: css`
-		font-size: ${typeSize.lg};
+		font-size: ${font.lg};
 	`,
 	xl: css`
-		font-size: ${typeSize.xl};
+		font-size: ${font.xl};
 	`,
 	xxl: css`
-		font-size: ${typeSize.xxl};
+		font-size: ${font.xxl};
 	`,
 };
 

@@ -3,7 +3,7 @@ import {
 	colorBase,
 	colorPrimary,
 	colorSecondary,
-	typeSize,
+	font,
 } from '../../assets/styles';
 
 type IconProps = {
@@ -22,37 +22,37 @@ const colors = {
 
 const sizes = {
 	xxs: css`
-		font-size: ${typeSize.xxs};
+		font-size: ${font.xxs};
 	`,
 	xs: css`
-		font-size: ${typeSize.xs};
+		font-size: ${font.xs};
 	`,
 	sm: css`
-		font-size: ${typeSize.sm};
+		font-size: ${font.sm};
 	`,
 	md: css`
-		font-size: ${typeSize.md};
+		font-size: ${font.md};
 	`,
 	lg: css`
-		font-size: ${typeSize.lg};
+		font-size: ${font.lg};
 	`,
 	xl: css`
-		font-size: ${typeSize.xl};
+		font-size: ${font.xl};
 	`,
 	xxl: css`
-		font-size: ${typeSize.xxl};
+		font-size: ${font.xxl};
 	`,
 	xxxl: css`
-		font-size: ${typeSize.xxxl};
+		font-size: ${font.xxxl};
 	`,
 	xxxxl: css`
-		font-size: ${typeSize.xxxxl};
+		font-size: ${font.xxxxl};
 	`,
 };
 
 const Icon = styled.div<IconProps>`
 	color: ${colorBase.default};
-	font-size: ${typeSize.sm};
+	font-size: ${font.sm};
 	display: inline-block;
 	line-height: 0;
 	margin: 0;

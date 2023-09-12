@@ -1,4 +1,4 @@
-export const typeSize = {
+export const font = {
 	xxs: '0.8rem',
 	xs: '1rem',
 	sm: '1.3rem',

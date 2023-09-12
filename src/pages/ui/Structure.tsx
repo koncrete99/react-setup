@@ -4,11 +4,11 @@ import Container from '../../ui/structure/Container';
 import Grid from '../../ui/structure/Grid';
 import Section from '../../ui/structure/Section';
 
-function GridPage() {
+function Structural() {
 	return (
 		<Section>
 			<Container>
-				<Grid>
+				<Grid $columns="1fr 1fr 1fr">
 					<Column>
 						<Card>
 							<h1>ToDo</h1>
@@ -42,4 +42,4 @@ function GridPage() {
 	);
 }
 
-export default GridPage;
+export default Structural;

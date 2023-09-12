@@ -8,22 +8,28 @@ type LinkProps = {
 const colors = {
 	primary: css`
 		color: ${colorPrimary.default};
+		text-decoration: none;
 		&:hover,
 		&:focus {
-			background-color: ${colorPrimary.dark};
+			color: ${colorPrimary.dark};
 		}
 	`,
 	secondary: css`
 		color: ${colorSecondary.default};
+		text-decoration: none;
 		&:hover,
 		&:focus {
-			background-color: ${colorSecondary.dark};
+			color: ${colorSecondary.dark};
 		}
 	`,
 };
 
 const Link = styled.a<LinkProps>`
 	color: ${colorBase.default};
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
 	${(props) => props.color && colors[props.color]}
 `;
 

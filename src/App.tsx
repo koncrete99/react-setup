@@ -8,8 +8,9 @@ import { GlobalStyle } from './assets/styles';
 
 const AppLayout = lazy(() => import('./ui/layout/AppLayout'));
 const Index = lazy(() => import('./pages/Index'));
-const Layout = lazy(() => import('./pages/design-system/LayoutPage'));
-const Grid = lazy(() => import('./pages/design-system/GridPage'));
+const Typography = lazy(() => import('./pages/ui/Typography'));
+const Elements = lazy(() => import('./pages/ui/Elements'));
+const Structure = lazy(() => import('./pages/ui/Structure'));
 const PageNotFound = lazy(
 	() => import('./pages/fallback/PageNotFoundFallback')
 );
@@ -18,8 +19,9 @@ const router = createBrowserRouter([
 		element: <AppLayout />,
 		children: [
 			{ path: '/', element: <Index /> },
-			{ path: 'design-system/layout', element: <Layout /> },
-			{ path: 'design-system/grid', element: <Grid /> },
+			{ path: 'ui/typography', element: <Typography /> },
+			{ path: 'ui/elements', element: <Elements /> },
+			{ path: 'ui/structural', element: <Structure /> },
 			{ path: '*', element: <PageNotFound /> },
 		],
 	},

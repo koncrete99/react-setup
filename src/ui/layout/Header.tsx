@@ -4,7 +4,7 @@ import MainNav from './MainNav';
 import { colorBase, size } from '../../assets/styles';
 
 const StyledHeader = styled.header`
-	background-color: ${colorBase[950]};
+	border-bottom: 1px solid ${colorBase[800]};
 	padding: ${size.xs} ${size.sm};
 	display: grid;
 	grid-template-columns: auto auto;

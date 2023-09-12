@@ -9,5 +9,5 @@ export const size = {
 	xxl: '5rem',
 	xxxl: '10rem',
 	xxxxl: '20rem',
-	none: '0',
+	'0': '0',
 };

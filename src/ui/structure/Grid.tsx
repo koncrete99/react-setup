@@ -1,9 +1,20 @@
 import styled from 'styled-components';
+import { device, size } from '../../assets/styles';
 
-const Grid = styled.div`
+type GridProps = {
+	$columns?: string;
+	$justifyContent?: string;
+};
+
+const Grid = styled.div<GridProps>`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 2rem;
+	gap: ${size.md};
+	grid-template-columns: 1fr;
+	@media ${device.tablet} {
+		flex-direction: row;
+		grid-template-columns: ${(props) => props.$columns ?? 'auto'};
+		justify-content: ${(props) => props.$justifyContent ?? 'start'};
+	}
 `;
 
 export default Grid;

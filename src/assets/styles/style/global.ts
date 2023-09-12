@@ -1,40 +1,35 @@
 import { createGlobalStyle } from 'styled-components';
-import { colorPrimary, typeSize } from '../index';
+import { colorPrimary, font } from '../index';
 import { colorBase } from '../index';
 
 export const GlobalStyle = createGlobalStyle`
 
-@font-face {
-  font-family: "Roboto";
-  src: url('/src/assets/fonts/Roboto-Thin.ttf');
-  font-weight: 100;
-  font-style: normal;
-}
+
 
 @font-face {
-  font-family: "Roboto";
-  src: url('/src/assets/fonts/Roboto-Light.ttf');
+  font-family: "Ubuntu";
+  src: url('/src/assets/fonts/Ubuntu-Light.ttf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url('/src/assets/fonts/Roboto-Regular.ttf');
+  font-family: "Ubuntu";
+  src: url('/src/assets/fonts/Ubuntu-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url('./fonts/Roboto-Medium.ttf');
+  font-family: "Ubuntu";
+  src: url('/src/assets/fonts/Ubuntu-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url('/src/assets/fonts/Roboto-Bold.ttf');
+  font-family: "Ubuntu";
+  src: url('/src/assets/fonts/Ubuntu-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
@@ -60,9 +55,9 @@ html {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Ubuntu, sans-serif;
   font-weight: 400;
-  font-size: ${typeSize.md};
+  font-size: ${font.md};
   color: ${colorBase[300]};
   transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;
@@ -129,6 +124,10 @@ p:not(:last-of-type) {
 
 img {
   max-width: 100%;
+}
+
+pre {
+  white-space: pre-wrap;
 }
 
 `;
